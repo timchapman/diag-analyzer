@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?> 
+<TextImport>
+  <KnownRowsets>
+    <Rowset name="tbl_IMPORTEDFILES" enabled="true" identifier="-- Script Source --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SCRIPT_ENVIRONMENT_DETAILS" enabled="true" identifier="-- Script and Environment Details --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SYSPERFINFO" enabled="true" identifier="-- sysperfinfo" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SQL_CPU_HEALTH" enabled="true" identifier="-- Recent SQL Processor Utilization (Health Records) --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_RUNTIMES" enabled="true" identifier="Start time:" type="RowsetImportEngine.SimpleMessageRowset"/>
+    <Rowset name="tbl_DEBUGPRINT" enabled="true" identifier="DebugPrint:" type="RowsetImportEngine.SimpleMessageRowset"/>
+    <Rowset name="tbl_WAITSTATS" enabled="true" identifier="DBCC SQLPERF(WAITSTATS)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SYSPROCESSES" enabled="true" identifier="SYSPROCESSES" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_INPUTBUFFERS" enabled="true" identifier="DBCC INPUTBUFFER FOR SPID" type="RowsetImportEngine.InputbuffersRowset"/>
+    <Rowset name="tbl_DBCC_OPENTRAN_RAW" enabled="true" identifier="DBCC OPENTRAN FOR" type="RowsetImportEngine.DbccOpentranRowset"/>
+    <Rowset name="tbl_SYSLOCKINFO" enabled="false" identifier="SYSLOCKINFO" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_UMSSTATS" enabled="true" identifier="Statistic                        Value" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SPINLOCKSTATS2" enabled="true" identifier="--  dm_os_spinlock_stats(NOTexist) --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SPINLOCKSTATS" enabled="true" identifier="--  dm_os_spinlock_stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_MEMORYSTATUS_BUF_DISTRIBUTION" enabled="true" identifier="Buffer Distribution" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_MEMORYSTATUS_BUF_COUNTS" enabled="true" identifier="Buffer Counts" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_MEMORYSTATUS_PROC_CACHE" enabled="true" identifier="Procedure Cache" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_MEMORYSTATUS_DYNAMIC_MEM_MGR" enabled="true" identifier="Dynamic Memory Manager" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_MEMORYSTATUS_GLOBAL_MEM_OBJ" enabled="true" identifier="Global Memory Objects" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_MEMORYSTATUS_QUERY_MEM_OBJ" enabled="true" identifier="Query Memory Objects" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_MEMORYSTATUS_OPTIMIZATION_QUEUE" enabled="true" identifier="Optimization Queue" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_ERRORLOGS_RAW" enabled="true" identifier="--make it invalid ContinuationRow" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SPCONFIGURE" enabled="true" identifier="sp_configure" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_loaded_modules" enabled="true" identifier="-> sys.dm_os_loaded_modules" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_os_loaded_modules" enabled="true" identifier="-- sys.dm_os_loaded_modules --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sysaltfiles" enabled="true" identifier="--> sysaltfiles" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_StartupParameters" enabled="true" identifier="--Startup Parameters--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SPHELPDB" enabled="true" identifier="sp_helpdb" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_XPMSVER" enabled="true" identifier="xp_msver" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_REQUESTS" enabled="true" identifier="-- requests" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_NOTABLEACTIVEQUERIES" enabled="true" identifier="-- notableactivequeries" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_HEADBLOCKERSUMMARY" enabled="true" identifier="-- headblockersummary" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_OS_WAIT_STATS" enabled="true" identifier="-- dm_os_wait_stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SYSOBJECTS" enabled="true" identifier="-- .dbo.sysobjects" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_RDTSCTEST" enabled="true" identifier="-- Current CPU Speeds --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DM_OS_MEMORY_CLERKS" enabled="true" identifier="-- dm_os_memory_clerks" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DM_OS_MEMORY_CACHE_COUNTERS" enabled="true" identifier="-- dm_os_memory_cache_counters" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DM_OS_MEMORY_CACHE_CLOCK_HANDS" enabled="true" identifier="-- sys.dm_os_memory_cache_clock_hands" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DM_OS_MEMORY_CACHE_HASH_TABLES" enabled="true" identifier="-- sys.dm_os_memory_cache_hash_tables" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tblErrorlog" enabled="true" identifier="-- ERRORLOG ROWSET" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_FileStats" enabled="true" identifier="-- File Stats (full)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DM_OS_MEMORY_CACHE_ENTRIES" enabled="true" identifier="-- sys.dm_os_memory_cache_entries" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DM_EXEC_CACHED_PLANS" enabled="true" identifier="-- dm_exec_cached_plans" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DM_EXEC_QUERY_STATS" enabled="true" identifier="-- dm_exec_query_stats" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DM_OS_MEMORY_OBJECTS" enabled="true" identifier="-- dm_os_memory_objects" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DM_EXEC_CONNECTIONS" enabled="true" identifier="-- dm_exec_connections" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_TopNCPUByQueryHash" enabled="true" identifier="-- top 10 CPU by query_hash" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_TopNLogicalReadsByQueryHash" enabled="true" identifier="-- top 10 logical reads by query_hash" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_TopNDurationByQueryHash" enabled="true" identifier="-- top 10 elapsed time by query_hash" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_MissingIndexes" enabled="true" identifier="-- Missing Indexes --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_db_stats_properties" enabled="true" identifier="-- sys.dm_db_stats_propertiesr for" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SYSINDEXES" enabled="true" identifier="-- STATS_DATE and rowmodctr (remove this rowset)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_OS_WAIT_STATS" enabled="true" identifier="-- dm_db_wait_stats" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_RESOURCE_STATS" enabled="true" identifier="-- sys.resource_stats" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_RESOURCE_USAGE" enabled="true" identifier="-- sys.resource_usage" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DB_CONN_STATS" enabled="true" identifier="-- sys.database_connection_stats" type="RowsetImportEngine.TextRowset"/>   
+    <Rowset name="tbl_EVENT_LOG" enabled="true" identifier="-- sys.event_log" type="RowsetImportEngine.TextRowset"/> 
+    <Rowset name="tbl_sp_configure" enabled="true" identifier=" -> sp_configure" type="RowsetImportEngine.TextRowset"/>      
+    <Rowset name="tbl_dm_os_memory_brokers" enabled="true" identifier="-- dm_os_memory_brokers --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_exec_query_memory_grants" enabled="true" identifier="-- dm_exec_query_memory_grants --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_Query_Execution_Memory" enabled="true" identifier="-- query execution memory --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_workingset_trimming" enabled="true" identifier="-- memory_workingset_trimming" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_PowerPlan" enabled="true" identifier="--- Power Plan ---" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_ThreadStats" enabled="true" identifier="-- Thread Statistics" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_LockSummary" enabled="true" identifier="-- Lock summary --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_ServerProperties" enabled="true" identifier="--ServerProperty--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_Sys_Configurations" enabled="true" identifier="--sys.configurations--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DatabaseFiles" enabled="true" identifier="--database files--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SysDatabases" enabled="true" identifier="--sys.databases_ex--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_TraceFlags" enabled="true" identifier="--traceflags--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_XEvents" enabled="true" identifier="--XEvent Session Details--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_availability_groups" enabled="true" identifier="--sys.availability_groups--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_hadr_availability_replica_states" enabled="true" identifier="--sys.dm_hadr_availability_replica_states--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_availability_replicas" enabled="true" identifier="--sys.availability_replicas--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_os_sys_info" enabled="True" identifier="-- sys.dm_os_sys_info --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_os_nodes" enabled="True" identifier="-- sys.dm_os_nodes --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_Thread_Stats_Snapshot" enabled="true" identifier="-- Thread Stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_OS_Schedulers_Snapshot" enabled="true" identifier="--sys.dm_os_schedulers--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_OS_Schedulers" enabled="true" identifier="-- dm_os_schedulers --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_Thread_Stats" enabled="true" identifier="-- Thread Statistics --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_System_Requests" enabled="true" identifier="-- System Requests --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sysperfinfo" enabled="true" identifier="-- sysperfinfo_raw (general perf subset) --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_os_latch_stats" enabled="true" identifier="-- sys.dm_os_latch_stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_PlanCache_Stats" enabled="true" identifier="-- Plan Cache Stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_db_file_space_usage" enabled="True" identifier="-- dm_db_file_space_usage --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_exec_cursors" enabled="True" identifier="-- dm_exec_cursors(0) --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_profiler_trace_summary" enabled="true" identifier="--profiler trace summary" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_os_ring_buffers_conn" enabled="True" identifier="-- dm_os_ring_buffers --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_ring_buffer_temp" enabled="True" identifier="-- ringbuffer --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_trace_event_details" enabled="true" identifier="--trace event details" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_os_memory_nodes" enabled="True" identifier="-- sys.dm_os_memory_nodes --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_resource_governor_configuration" enabled="True" identifier="-- sys.resource_governor_configuration --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_resource_governor_workload_groups" enabled="True" identifier="-- sys.resource_governor_workload_groups --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_resource_governor_resource_pools" enabled="True" identifier="-- sys.resource_governor_resource_pools --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dbm_partner_time" enabled="true" identifier="dbm_partner_time" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dbm_timeout_connections" enabled="true" identifier="--MS_CSS_Monitor_DBM_Timeouts_connections--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dbm_perf_control" enabled="true" identifier="--DBM perf script control comment--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dbm_perf_connection" enabled="true" identifier="--DBM perf script connection comment--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dbm_perf_executions" enabled="true" identifier="--DBM wait and exec summary--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_db_mirroring_connections" enabled="true" identifier="--sys.dm_db_mirroring_connections--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DiagInfo" enabled="true" identifier="-- DiagInfo --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_db_stats_properties" enabled="true" identifier="--sys.dm_db_stats_properties--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_DisabledIndexes" enabled="true" identifier="--disabled indexes--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_QDS_Query_Stats" enabled="true" identifier="-- QDS Query Stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_xtp_gc_stats" enabled="true" identifier="--sys.dm_xtp_gc_stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_xtp_gc_queue_stats" enabled="true" identifier="--sys.dm_xtp_gc_queue_stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_db_xtp_table_memory_stats" enabled="true" identifier="--sys.dm_db_xtp_table_memory_stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_xtp_system_memory_consumers" enabled="true" identifier="--sys.dm_xtp_system_memory_consumers --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_os_performance_counters" enabled="true" identifier="-- sql server performance counters --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_IndexDetail" enabled="True" identifier="--IndexDetail" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_IndexOperations" enabled="True" identifier="-- IndexOperations" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_UnusedIndexes" enabled="True" identifier="-- UnusedIndexes" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_LogInfo" enabled="True" identifier="-- LogInfo" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_LogUsage" enabled="True" identifier="-- LogUsage" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_MemoryAllocations" enabled="True" identifier="-- MemoryAllocations" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_GetStats" enabled="True" identifier="-- GetStats" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_MemoryClerks" enabled="True" identifier="-- MemoryClerks" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_DBFileSizes" enabled="True" identifier="-- DBFileSizes" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="cust_WaitingTasks" enabled="True" identifier="-- WaitingTasks" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Waiting" enabled="True" identifier="-- Waiting" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_MissingIndexes" enabled="True" identifier="-- MissingIndexes" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_OSInfo" enabled="True" identifier="-- OSInfo" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TempDBUsage" enabled="True" identifier="-- TempDBUsage" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_SPConfigure" enabled="True" identifier="==== sp_configure" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ExpensiveQueries" enabled="True" identifier="-- ExpensiveQueries" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ActiveTraceFlags" enabled="True" identifier="==== Active Trace Flags" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_HelpServer" enabled="True" identifier="==== sp_helpserver" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_MemoryObjects" enabled="True" identifier="-- sys.dm_os_memory_objects" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_RingBufferSchedulerMonitor" enabled="True" identifier="-- RingBufferSchedulerMonitor" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TempDBTaskSpaceUsage" enabled="True" identifier="-- TempDBTaskSpaceUsage" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TempDBSessionSpaceUsage" enabled="True" identifier="-- TempDBSessionSpaceUsage" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_RingBufferResourceMonitor" enabled="True" identifier="-- RingBufferResourceMonitor" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_LatchWaits" enabled="True" identifier="-- LatchWaits" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ObjectPermissions" enabled="True" identifier="-- ObjectPermissions" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_RingBufferExceptionMonitor" enabled="True" identifier="-- RingBufferExceptionMonitor" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_MembershipPermissions" enabled="True" identifier="-- MembershipPermissions" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Databases" enabled="True" identifier="-- Databases" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_OptimizerInfo" enabled="True" identifier="-- OptimizerInfo" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TempDBTaskAnalysis" enabled="True" identifier="-- TempDBTaskAnalysis" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_LastDBCCCheckDBDate" enabled="True" identifier="-- LastDBCCCheckDBDate" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_CorrelatedIndexInfo" enabled="True" identifier="-- CorrelatedIndexInfo" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Configure" enabled="True" identifier="-> sp_configure" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSMerge_agents" enabled="True" identifier="-> select * from [distribution].[dbo].[MSmerge_agents] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSarticles" enabled="True" identifier="-> select * from [distribution].[dbo].[MSarticles] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MScached_peer_lsns" enabled="True" identifier="-> select * from [distribution].[dbo].[MScached_peer_lsns] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSdistribution_agents" enabled="True" identifier="-> select *  from [distribution].[dbo].[MSdistribution_agents] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSlogreader_agents" enabled="True" identifier="-> select * from [distribution].[dbo].[MSlogreader_agents] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSmerge_articlehistory" enabled="True" identifier="-> select * from [distribution].[dbo].[MSmerge_articlehistory] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSmerge_history" enabled="True" identifier="-> select * from [distribution].[dbo].[MSmerge_history] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSmerge_identity_range_allocations" enabled="True" identifier="-> select * from [distribution].[dbo].[MSmerge_identity_range_allocations] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSmerge_sessions" enabled="True" identifier="-> select * from [distribution].[dbo].[MSmerge_sessions] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSmerge_subscriptions" enabled="True" identifier="-> select * from [distribution].[dbo].[MSmerge_subscriptions] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSpublication_access" enabled="True" identifier="-> select * from [distribution].[dbo].[MSpublication_access] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSpublications" enabled="True" identifier="-> select * from [distribution].[dbo].[MSpublications] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSpublicationthresholds" enabled="True" identifier="-> select * from [distribution].[dbo].[MSpublicationthresholds] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSpublisher_databases" enabled="True" identifier="-> select * from [distribution].[dbo].[MSpublisher_databases] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSqreader_agents" enabled="True" identifier="-> select * from [distribution].[dbo].[MSqreader_agents] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSrepl_backup_lsns" enabled="True" identifier="-> select * from [distribution].[dbo].[MSrepl_backup_lsns] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSrepl_identity_range" enabled="True" identifier="-> select * from [distribution].[dbo].[MSrepl_identity_range] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSrepl_originators" enabled="True" identifier="-> select * from [distribution].[dbo].[MSrepl_originators] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSrepl_version" enabled="True" identifier="-> select * from [distribution].[dbo].[MSrepl_version] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSreplication_monitordata" enabled="True" identifier="-> select * from [distribution].[dbo].[MSreplication_monitordata] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSsnapshot_agents" enabled="True" identifier="-> select * from [distribution].[dbo].[MSsnapshot_agents] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSsubscriber_info" enabled="True" identifier="-> select * from [distribution].[dbo].[MSsubscriber_info] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSsubscriber_schedule" enabled="True" identifier="-> select * from [distribution].[dbo].[MSsubscriber_schedule] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSsubscriptions" enabled="True" identifier="-> select * from [distribution].[dbo].[MSsubscriptions] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MSsync_states" enabled="True" identifier="-> select * from [distribution].[dbo].[MSsync_states] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MStracer_history" enabled="True" identifier="-> select * from [distribution].[dbo].[MStracer_history] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="MStracer_tokens" enabled="True" identifier="-> select * from [distribution].[dbo].[MStracer_tokens] (nolock)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="TopDistributionHistory" enabled="True" identifier="-> select top 1000 * from [distribution].[dbo].[MSdistribution_history] (nolock) order by  time desc" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="TopLogReaderHistory" enabled="True" identifier="-> select top 1000 * from [distribution].[dbo].[MSlogreader_history] (nolock) order by time desc" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="TopMSmerge_historyTime" enabled="True" identifier="-> select top 1000 *  from [distribution].[dbo].[MSmerge_history] (nolock) order by time desc" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="TopQReaderHistory" enabled="True" identifier="-> select top 1000 * from [distribution].[dbo].[MSqreader_history] (nolock) order by start_time desc" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="TopReplCommands" enabled="True" identifier="-> select top 1000 publisher_database_id,xact_seqno,count(*) as numcommands from [distribution].[dbo].[MSrepl_commands] (nolock) group by publisher_database_id,xact_seqno order by publisher_database_id,numcommands DESC" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="TopReplErrorGrouping" enabled="True" identifier="-> select error_code,[Count]=count(*) from [distribution].[dbo].[msrepl_errors] GROUP BY error_code " type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="TopReplErrors" enabled="True" identifier="-> select top 1000 * from [distribution].[dbo].[msrepl_errors] ORDER BY [TIME] DESC" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="TopSnapshotHistory" enabled="True" identifier="-> select top 1000 * from [distribution].[dbo].[MSsnapshot_history] (nolock) order by time desc" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="sysdatabases" enabled="True" identifier="-> select * from [master].[dbo].[sysdatabases]" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="sysjobs" enabled="True" identifier="-> select * from [msdb].[dbo].[sysjobs]" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="sysservers" enabled="True" identifier="-> select * from [master].[dbo].[sysservers]" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TopPlanStats" enabled="True" identifier="-- Top N Query Plan Statistics --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Top10CPU" enabled="True" identifier="-- top 10 CPU by query_hash --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Top10LogicalReads" enabled="True" identifier="-- top 10 logical reads by query_hash --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Top10Duration" enabled="True" identifier="-- top 10 elapsed time by query_hash --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ResourceSemaphores" enabled="True" identifier="-- dm_exec_query_resource_semaphores --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Spinlocks" enabled="True" identifier="-- Spinlocks" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_RunningTasksOS" enabled="True" identifier="-- Running Tasks" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TableAllocations" enabled="True" identifier="-- TableAllocations" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QPRelOp" enabled="True" identifier="-- QPRelOp" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QPQueryPlan" enabled="True" identifier="-- QPQueryPlan" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QPQueryDetail" enabled="True" identifier="-- QPQueryDetail" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QPHardware" enabled="True" identifier="-- QPHardware" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QPMemGrants" enabled="True" identifier="-- QPMemGrants" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QPSniffing" enabled="True" identifier="-- QPSniffing" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QPWarnings" enabled="True" identifier="-- QPWarnings" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QPObjects" enabled="True" identifier="-- QPObjects" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_CompressionDetails" enabled="True" identifier="-- CompressionDetails" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QueryHash" enabled="True" identifier="-- QueryHash" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_IndexDefs" enabled="True" identifier="-- IndexDefs" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_IndexUsage" enabled="True" identifier="-- IndexUsage" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_IndexOps" enabled="True" identifier="-- IndexOps" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TraceStatus" enabled="True" identifier="-- TraceStatus" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_PowerPlan" enabled="True" identifier="--- Power Plan" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_MemoryGrants" enabled="True" identifier="-- MemoryGrants" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_OSProcessMemory" enabled="True" identifier="-- sys.dm_os_process_memory --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_RGConfig" enabled="True" identifier="-- RGConfig" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_RGPools" enabled="True" identifier="-- RGPools" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_RGGroups" enabled="True" identifier="-- RGWorkloadGroups" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_EncryptionKeys" enabled="True" identifier="--sys.dm_database_encryption_keys  Transparent Database Encryption (TDE) information" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Top10Procs" enabled="True" identifier="--top 10 CPU consuming procedures" type="RowsetImportEngine.TextRowset"/> 
+    <Rowset name="cust_Top10Triggers" enabled="True" identifier="--top 10 CPU consuming triggers" type="RowsetImportEngine.TextRowset"/> 
+    <Rowset name="cust_ProcessorInformation" enabled="True" identifier="======================= Processor =======================" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ActualCPUSpeeds" enabled="True" identifier="======================= Actual CPU Speed ================" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_MachineMemoryDetail" enabled="True" identifier="======================= Memory ==========================" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TraceFlags" enabled="True" identifier="-- Trace flag initial values" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_AvailableRAM" enabled="True" identifier="-- AvailableRAM" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_SuspectPages" enabled="True" identifier="-- SuspectPages" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_DBDiskSpace" enabled="True" identifier="-- DBDiskSpace" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_DeprecatedFeatures" enabled="True" identifier="--Deprecated" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_DefaultTraceData" enabled="True" identifier="--DefaultTraceData" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_AllObjects" enabled="True" identifier="-- AllObjects" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_BackupHistory" enabled="True" identifier="-- BackupHistory" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Triggers" enabled="True" identifier="-- Triggers" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TaskProcesses" enabled="True" identifier="--TASKLIST /V (process list)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TaskServices" enabled="True" identifier="--TASKLIST /SVC (service list)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TaskModules" enabled="True" identifier="--TASKLIST /M (module list)" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_PendingIOs" enabled="True" identifier="-- PendingIOs" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Requests" enabled="True" identifier="-- requests --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ActiveDTCSessions" enabled="True" identifier="-- sys.dm_tran_session_transactions (DTC ONLY) --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_NotableActiveQueries" enabled="True" identifier="-- notableactivequeries --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_azurebandwidth" enabled="True" identifier="-- azurebandwidth" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_azurebufferpool" enabled="True" identifier="-- azurebufferpool" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SPCONFIGURE" enabled="True" identifier="-- azureconfig" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_AzureEventLog" enabled="True" identifier="-- AzureEventLog" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_AzureGeoRepl" enabled="True" identifier="-- AzureGeoRepl" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ResourceGovExternalPools" enabled="True" identifier="-- ResourceGovExternalPools" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ResourceGovExternalPoolAffinity" enabled="True" identifier="-- ResourceGovExternalPoolAffinity" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ResourceGovPoolAffinity" enabled="True" identifier="-- ResourceGovPoolAffinity" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_azurefilewallrules" enabled="True" identifier="-- azurefilewallrules" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_azureserverinfo" enabled="True" identifier="-- azureserverinfo" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_azureserverproperties" enabled="True" identifier="-- azureserverproperties" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_OutOfMemoryEvents" enabled="True" identifier="-- OutOfMemoryEvents" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_azureelasticpools" enabled="True" identifier="-- azureelasticpools" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Fragmentation" enabled="True" identifier="-- Fragmentation" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Locking" enabled="True" identifier="-- Locking" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_MemGrantsPending" enabled="True" identifier="-- MemGrantsPending" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_AzurePLE" enabled="True" identifier="-- AzurePLE" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QueryStoreOptions" enabled="True" identifier="-- QueryStoreOptions" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_QPTuningRecommendations" enabled="True" identifier="-- QPTuningRecommendations" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_UDFExecution" enabled="True" identifier="-- UDFExecution" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_database_resource_governor_workload_groups" enabled="True" identifier="-- azuresql_general_database_resource_governor_workload_groups" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_dbconnectionstats" enabled="True" identifier="-- azuresql_general_dbconnectionstats" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_dbfirewallrules" enabled="True" identifier="-- azuresql_general_dbfirewallrules" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_dbscopedconfiguration" enabled="True" identifier="-- azuresql_general_dbscopedconfiguration" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_general_DBSLAs" enabled="True" identifier="-- azuresql_general_DBSLAs" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_dm_resource_governor_resource_pools" enabled="True" identifier="-- azuresql_general_dm_resource_governor_resource_pools" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_resource_governor_resource_pools_history_ex" enabled="True" identifier="-- azuresql_general_dm_resource_governor_resource_pools_history_ex" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_resource_governor_workload_groups" enabled="True" identifier="-- azuresql_general_dm_resource_governor_workload_groups" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_resource_governor_workload_groups_history_ex" enabled="True" identifier="-- azuresql_general_dm_resource_governor_workload_groups_history_ex" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ConnectionDetails" enabled="True" identifier="--- connection details ---" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_TopConsumingQueries" enabled="True" identifier="--- top cpu consuming queries ---" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_DBObjetSizes" enabled="True" identifier="--- database object sizes ---" type="RowsetImportEngine.TextRowset"/>	
+    <Rowset name="cust_TotalDBSize" enabled="True" identifier="--- total db size ---" type="RowsetImportEngine.TextRowset"/>	
+    <Rowset name="cust_QueryBufferWaits" enabled="True" identifier="--- query buffer waits ---" type="RowsetImportEngine.TextRowset"/>	
+    <Rowset name="cust_IOUsage" enabled="True" identifier="--- io usage ---" type="RowsetImportEngine.TextRowset"/>		
+    <Rowset name="cust_TLogConsumers" enabled="True" identifier="--- tlog consumers ---" type="RowsetImportEngine.TextRowset"/>		
+    <Rowset name="cust_StatsDateIndexes" enabled="True" identifier="-- STATS_DATE and rowmodctr from sysindexes --" type="RowsetImportEngine.TextRowset"/>	
+    <Rowset name="cust_BatchResponseBaseline" enabled="True" identifier="-- BatchResponses" type="RowsetImportEngine.TextRowset"/>	
+    <Rowset name="cust_DBResourceStats" enabled="True" identifier="-- DBResourceStats" type="RowsetImportEngine.TextRowset"/>	
+    <Rowset name="cust_ResourceStats" enabled="True" identifier="-- ResourceStats" type="RowsetImportEngine.TextRowset"/>	
+    <Rowset name="tbl_query_store_wait_stats" enabled="True" identifier="--sys.query_store_wait_stats--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ServerResourceStats" enabled="True" identifier="-- sys.server_resource_stats" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_OS_WAIT_STATS" enabled="True" identifier="-- dbo.tbl_OS_WAIT_STATS" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_SysMemory" enabled="True" identifier="-- sys.dm_os_sys_memory --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ErrorLog" enabled="True" identifier="-- AzureErrorlogs" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_AutoTuningConfig" enabled="True" identifier="-- AutoTuning" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_Deadlocks" enabled="True" identifier="-- Deadlocks" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_JobObjects" enabled="True" identifier="-- JobObjects" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_DBWaitStat" enabled="True" identifier="-- DBWaitStats" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ResourceGovernance" enabled="True" identifier="-- ResourceGovernance" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ImpactedObjects" enabled="True" identifier="-- ImpactedObjects" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_OperationStatus" enabled="True" identifier="-- OperationStatus" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_ServerResourceStatsSummary" enabled="True" identifier="-- sys.server_resource_statssummary" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_AllServices" enabled="True" identifier="[Services]" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="sys_master_files" enabled="True" identifier="-&gt; sys.master_files" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_tran_active_transactions" enabled="True" identifier="-&gt; sys.dm_tran_active_transactions" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_sys_info" enabled="True" identifier="-&gt; sys.dm_os_sys_info" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_schedulers" enabled="True" identifier="-&gt; sys.dm_os_schedulers" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_threads" enabled="True" identifier="-&gt; sys.dm_os_threads" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_workers" enabled="True" identifier="-&gt; sys.dm_os_workers" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_tasks" enabled="True" identifier="-&gt; sys.dm_os_tasks" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_io_pending_io_requests" enabled="True" identifier="-&gt; sys.dm_io_pending_io_requests" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_io_virtual_file_stats" enabled="True" identifier="-&gt; sys.dm_io_virtual_file_stats" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_latch_stats" enabled="True" identifier="-&gt; sys.dm_os_latch_stats" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_spinlock_stats" enabled="True" identifier="-&gt; sys.dm_os_spinlock_stats" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_sublatches" enabled="True" identifier="-&gt; sys.dm_os_sublatches" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_memory_pools" enabled="True" identifier="-&gt; sys.dm_os_memory_pools" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_memory_clerks" enabled="True" identifier="-&gt; sys.dm_os_memory_clerks" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_memory_brokers" enabled="True" identifier="-&gt; sys.dm_os_memory_brokers" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_memory_nodes" enabled="True" identifier="-&gt; sys.dm_os_memory_nodes" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_wait_stats" enabled="True" identifier="-&gt; sys.dm_os_wait_stats" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_waiting_tasks" enabled="True" identifier="-&gt; sys.dm_os_waiting_tasks" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_cluster_nodes" enabled="True" identifier="-&gt; sys.dm_os_cluster_nodes" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_nodes" enabled="True" identifier="-&gt; sys.dm_os_nodes" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_process_memory" enabled="True" identifier="-&gt; sys.dm_os_process_memory" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_os_sys_memory" enabled="True" identifier="-&gt; sys.dm_os_sys_memory" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_io_cluster_shared_drives" enabled="True" identifier="-&gt; sys.dm_io_cluster_shared_drives" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_clr_appdomains" enabled="True" identifier="-&gt; sys.dm_clr_appdomains" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_clr_loaded_assemblies" enabled="True" identifier="-&gt; sys.dm_clr_loaded_assemblies" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_clr_properties" enabled="True" identifier="-&gt; sys.dm_clr_properties" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_clr_tasks" enabled="True" identifier="-&gt; sys.dm_clr_tasks" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_assemblies" enabled="True" identifier="-&gt; sys.assemblies" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_assembly_modules" enabled="True" identifier="-&gt; sys.assembly_modules" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_assembly_types" enabled="True" identifier="-&gt; sys.assembly_types" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_db_file_space_usage" enabled="True" identifier="-&gt; sys.dm_db_file_space_usage" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_db_session_space_usage" enabled="True" identifier="-&gt; sys.dm_db_session_space_usage" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_db_task_space_usage" enabled="True" identifier="-&gt; sys.dm_db_task_space_usage" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_exec_query_memory_grants" enabled="True" identifier="-&gt; sys.dm_exec_query_memory_grants" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_exec_query_resource_semaphores" enabled="True" identifier="-&gt; sys.dm_exec_query_resource_semaphores" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_broker_activated_tasks" enabled="True" identifier="-&gt; sys.dm_broker_activated_tasks" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_broker_connections" enabled="True" identifier="-&gt; sys.dm_broker_connections" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_broker_queue_monitors" enabled="True" identifier="-&gt; sys.dm_broker_queue_monitors" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_resource_governor_configuration" enabled="True" identifier="-&gt; sys.dm_resource_governor_configuration" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_resource_governor_resource_pools" enabled="True" identifier="-&gt; sys.dm_resource_governor_resource_pools" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_resource_governor_workload_groups" enabled="True" identifier="-&gt; sys.dm_resource_governor_workload_groups" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_database_encryption_keys" enabled="True" identifier="-&gt; sys.dm_database_encryption_keys" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_filestream_file_io_handles" enabled="True" identifier="-&gt; sys.dm_filestream_file_io_handles" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_filestream_file_io_requests" enabled="True" identifier="-&gt; sys.dm_filestream_file_io_requests" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sysperfinfo_snapshot_1" enabled="True" identifier="-&gt; sysperfinfo snapshot #1" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sysperfinfo_snapshot_2" enabled="True" identifier="-&gt; sysperfinfo snapshot #2" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_fts_active_catalogs" enabled="True" identifier="-&gt; sys.dm_fts_active_catalogs" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_fts_index_population" enabled="True" identifier="-&gt; sys.dm_fts_index_population" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_fts_memory_pools" enabled="True" identifier="-&gt; sys.dm_fts_memory_pools" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="sys_dm_fts_population_ranges" enabled="True" identifier="-&gt; sys.dm_fts_population_ranges" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="msdb_suspect_pages" enabled="True" identifier="-&gt; msdb..suspect_pages" type="RowsetImportEngine.TextRowset" />
+
+    <Rowset name="SQLskills_DiskLatencyInfo" enabled="True" identifier="-- Disk Latency Information" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_FileLatencyInfo" enabled="True" identifier="-- File Latency Information" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_RING_BUFFER_RESOURCE_MONITOR" enabled="True" identifier="-- System Memory Usage" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_RING_BUFFER_SCHEDULER_MONITOR" enabled="True" identifier="-- CPU Utilization" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_RING_BUFFER_EXCEPTION" enabled="True" identifier="-- Error Exceptions" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_RING_BUFFER_CONNECTIVITY" enabled="True" identifier="-- Connectivity Timers" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_RING_BUFFER_MEMORY_BROKER" enabled="True" identifier="-- Get Startup Memory Utilization" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_RING_BUFFER_OOM" enabled="True" identifier="-- Out of Memory Notifications" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_MemoryClerkSummary" enabled="True" identifier="-- SQLskills_MemoryClerkSummary" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_BufferCacheDetail" enabled="True" identifier="-- SQLskills_BufferCacheDetail" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_FindImplicitConversions" enabled="True" identifier="-- SQLskills_FindImplicitConversions" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_LastBackupInfo" enabled="True" identifier="-- SQLskills_LastBackupInfo" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_PlanCacheSummary" enabled="True" identifier="-- SQLskills_PlanCacheSummary" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_BufferCacheSummary" enabled="True" identifier="-- SQLskills_BufferCacheSummary" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_AllLogInfo" enabled="True" identifier="-- SQLskills_AllLogInfo" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_IndexCounts" enabled="True" identifier="-- SQLskills_IndexCounts" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_Cores_vs_MaxDop" enabled="True" identifier="-- SQLskills_Cores_vs_MaxDop" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_IndexUsageForObject" enabled="True" identifier="-- SQLskills_IndexUsageForObject" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_WaitStatsOverall" enabled="True" identifier="-- SQLskills_WaitStatsOverall" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_MostExpensiveQueries" enabled="True" identifier="-- SQLskills_MostExpensiveQueries" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_DBInfo" enabled="True" identifier="-- SQLskills_DBInfo" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_BackupInfo" enabled="True" identifier="-- SQLskills_BackupInfo" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_LastCheckDBDate" enabled="True" identifier="-- SQLskills_LastCheckDBDate" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_sysconfigurations" enabled="True" identifier="-- SQLskills_sysconfigurations" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_SQLAgentAlerts" enabled="True" identifier="-- SQLskills_SQLAgentAlerts" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_MaintenancePlans" enabled="True" identifier="-- SQLskills_MaintenancePlans" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_SQLAgentJobs" enabled="True" identifier="-- SQLskills_SQLAgentJobs" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_IndexDetails" enabled="True" identifier="-- SQLskills_IndexDetails" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="SQLskills_MissingIndexes" enabled="True" identifier="-- SQLskills_MissingIndexes" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="cust_availability_databases_cluster" enabled="True" identifier="-> sys.availability_databases_cluster" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="cust_availability_group_listener_ip_addresses" enabled="True" identifier="-> sys.availability_group_listener_ip_addresses" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="cust_availability_group_listeners" enabled="True" identifier="-> sys.availability_group_listeners" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="cust_availability_groups" enabled="True" identifier="-> sys.availability_groups" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="cust_availability_groups_cluster" enabled="True" identifier="-> sys.availability_groups_cluster" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="cust_availability_read_only_routing_lists" enabled="True" identifier="-> sys.availability_read_only_routing_lists" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="cust_availability_replicas" enabled="True" identifier="-> sys.availability_replicas" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="tbl_query_store_runtime_stats_interval" enabled="True" identifier="--sys.query_store_runtime_stats_interval--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_query_store_runtime_stats" enabled="True" identifier="--sys.query_store_runtime_stats--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_query_store_query" enabled="True" identifier="--sys.query_store_query--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_query_store_query_text" enabled="True" identifier="--sys.query_store_query_text--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_query_store_plan" enabled="True" identifier="--sys.query_store_plan--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="cust_DBStatsProperties" enabled="True" identifier="-- sys.dm_db_stats_properties for database name%%" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="SQLskills_ClusteredIndexScans" enabled="True" identifier="-- SQLskills_ClusteredIndexScans" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="SQLskills_HashMatches" enabled="True" identifier="-- SQLskills_HashMatches" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="SQLskills_TableScans" enabled="True" identifier="-- SQLskills_TableScans" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="SQLskills_IndexScans" enabled="True" identifier="-- SQLskills_IndexScans" type="RowsetImportEngine.TextRowset"/>
+  
+    <Rowset name="tbl_high_cpu_queries" enabled="true" identifier="--  high_cpu_queries --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_AlwaysOn_health_alwayson_ddl_executed" enabled="true" identifier="-- AG_AlwaysOn_health_alwayson_ddl_executed --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_AlwaysOn_health_availability_group_lease_expired" enabled="true" identifier="-- AG_AlwaysOn_health_availability_group_lease_expired --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_AlwaysOn_health_availability_replica_manager_state_change" enabled="true" identifier="-- AG_AlwaysOn_health_availability_replica_manager_state_change --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_AlwaysOn_health_availability_replica_state_change" enabled="true" identifier="-- AG_AlwaysOn_health_availability_replica_state_change --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_AlwaysOn_health_error_reported" enabled="true" identifier="-- AG_AlwaysOn_health_error_reported --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_AlwaysOn_health_failovers" enabled="true" identifier="-- AG_AlwaysOn_health_failovers --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_dm_os_server_diagnostics_log_configurations" enabled="true" identifier="-- AG_dm_os_server_diagnostics_log_configurations --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_hadr_ag_ip_information" enabled="true" identifier="-- AG_hadr_ag_ip_information --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_hadr_ag_listeners" enabled="true" identifier="-- AG_hadr_ag_listeners --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_hadr_ag_replica_states" enabled="true" identifier="-- AG_hadr_ag_replica_states --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_hadr_ag_states" enabled="true" identifier="-- AG_hadr_ag_states --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_hadr_cluster" enabled="true" identifier="-- AG_hadr_cluster --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_hadr_cluster_members" enabled="true" identifier="-- AG_hadr_cluster_members --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_hadr_endpoints_principals" enabled="true" identifier="-- AG_hadr_endpoints_principals --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_hadr_readonly_routing" enabled="true" identifier="-- AG_hadr_readonly_routing --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_mirroring_endpoints_permissions" enabled="true" identifier="-- AG_mirroring_endpoints_permissions --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_mirroring_states" enabled="true" identifier="-- AG_mirroring_states --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_Current_database_options" enabled="true" identifier="-- Current database options --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_ExpensiveProcedures" enabled="true" identifier="-- ExpensiveProcedures" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_LSCustom" enabled="true" identifier="-- LSCustom" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_ObjectsInMaster" enabled="true" identifier="-- ObjectsInMaster" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_PerfBaseline" enabled="true" identifier="-- PerfBaseline" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_Windows_Group_Default_Databases_other_than_master" enabled="true" identifier="-- Windows Group Default Databases other than master --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_Windows_Hotfix_List" enabled="true" identifier="-- Windows Hotfix List --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_os_ring_buffers_sec_cache" enabled="true" identifier="-- dm_os_ring_buffers_sec_cache --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_fltmc_filters" enabled="true" identifier="-- fltmc_filters --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_fltmc_instances" enabled="true" identifier="-- fltmc_instances --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_server_times" enabled="true" identifier="-- server_times --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sys_change_tracking_databases" enabled="true" identifier="-- sys.change_tracking_databases --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sys_database_scoped_configurations" enabled="true" identifier="-- sys.database_scoped_configurations --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sys_dm_database_encryption_keys" enabled="true" identifier="-- sys.dm_database_encryption_keys --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sys_dm_database_encryption_keys_TDE" enabled="true" identifier="-- sys.dm_database_encryption_keys TDE --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sys_dm_server_audit_status" enabled="true" identifier="-- sys.dm_server_audit_status --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sys_dm_tran_active_transactions_DTC_ONLY" enabled="true" identifier="-- sys.dm_tran_active_transactions (DTC ONLY) --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sys_dm_tran_persistent_version_store_stats" enabled="true" identifier="-- sys.dm_tran_persistent_version_store_stats --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_sys_index_resumable_operations" enabled="true" identifier="-- sys.index_resumable_operations --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_top_10_CPU_by_query_plan_hash_and_query_hash" enabled="true" identifier="-- top 10 CPU by query_plan_hash and query_hash --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_top_10_elapsed_time_by_query_plan_hash_and_query_hash" enabled="true" identifier="-- top 10 elapsed time  by query_plan_hash and query_hash --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_top_10_logical_reads_by_query_plan_hash_and_query_hash" enabled="true" identifier="-- top 10 logical reads by query_plan_hash and query_hash --" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_AG_hadr_ag_database_replica_states" enabled="true" identifier="--AG_hadr_ag_database_replica_states--" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_SystemHealthErrors" enabled="true" identifier="--SystemHealthErrors" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="tbl_dm_os_sys_info" enabled="true" identifier="--dm_os_sys_info--" type="RowsetImportEngine.TextRowset"/>
+  </KnownRowsets>
+</TextImport>

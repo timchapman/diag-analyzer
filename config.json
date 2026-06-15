@@ -1,0 +1,12 @@
+{
+  "database_name": "data-analysis.db",
+  "database_directory": ".",
+  "max_threads": 8,
+  "max_queue_size": 200,
+  "mapping_config_path": "TextRowsets.xml",
+  "progress_log_path": "import_progress.csv",
+  "sqlite_pragmas": {
+    "journal_mode": "WAL",
+    "synchronous": "NORMAL"
+  }
+}

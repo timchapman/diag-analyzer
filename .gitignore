@@ -1,0 +1,30 @@
+# Database and Log files
+*.db
+*.db-wal
+*.db-shm
+import_progress.csv
+translation_failures.log
+Disabled.txt
+Missing.txt
+
+# Directories containing large diagnostic outputs, source files, or artifacts
+diagnostics/
+output_problem/
+scratch/
+.system_generated/
+SQLAnalyzer_modern/
+
+# Zip files of samples
+*.zip
+*.OUT
+
+# Python cache and temporary scripts
+__pycache__/
+*.py[cod]
+*$py.class
+parse_and_load.py
+import_perf_stats.py
+
+# OS-specific files
+.DS_Store
+Thumbs.db
