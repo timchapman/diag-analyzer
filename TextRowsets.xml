@@ -337,35 +337,35 @@
     <Rowset name="sys_dm_fts_population_ranges" enabled="True" identifier="-&gt; sys.dm_fts_population_ranges" type="RowsetImportEngine.TextRowset" />
     <Rowset name="msdb_suspect_pages" enabled="True" identifier="-&gt; msdb..suspect_pages" type="RowsetImportEngine.TextRowset" />
 
-    <Rowset name="SQLskills_DiskLatencyInfo" enabled="True" identifier="-- Disk Latency Information" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_FileLatencyInfo" enabled="True" identifier="-- File Latency Information" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_RING_BUFFER_RESOURCE_MONITOR" enabled="True" identifier="-- System Memory Usage" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_RING_BUFFER_SCHEDULER_MONITOR" enabled="True" identifier="-- CPU Utilization" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_RING_BUFFER_EXCEPTION" enabled="True" identifier="-- Error Exceptions" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_RING_BUFFER_CONNECTIVITY" enabled="True" identifier="-- Connectivity Timers" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_RING_BUFFER_MEMORY_BROKER" enabled="True" identifier="-- Get Startup Memory Utilization" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_RING_BUFFER_OOM" enabled="True" identifier="-- Out of Memory Notifications" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_MemoryClerkSummary" enabled="True" identifier="-- SQLskills_MemoryClerkSummary" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_BufferCacheDetail" enabled="True" identifier="-- SQLskills_BufferCacheDetail" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_FindImplicitConversions" enabled="True" identifier="-- SQLskills_FindImplicitConversions" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_LastBackupInfo" enabled="True" identifier="-- SQLskills_LastBackupInfo" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_PlanCacheSummary" enabled="True" identifier="-- SQLskills_PlanCacheSummary" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_BufferCacheSummary" enabled="True" identifier="-- SQLskills_BufferCacheSummary" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_AllLogInfo" enabled="True" identifier="-- SQLskills_AllLogInfo" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_IndexCounts" enabled="True" identifier="-- SQLskills_IndexCounts" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_Cores_vs_MaxDop" enabled="True" identifier="-- SQLskills_Cores_vs_MaxDop" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_IndexUsageForObject" enabled="True" identifier="-- SQLskills_IndexUsageForObject" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_WaitStatsOverall" enabled="True" identifier="-- SQLskills_WaitStatsOverall" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_MostExpensiveQueries" enabled="True" identifier="-- SQLskills_MostExpensiveQueries" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_DBInfo" enabled="True" identifier="-- SQLskills_DBInfo" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_BackupInfo" enabled="True" identifier="-- SQLskills_BackupInfo" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_LastCheckDBDate" enabled="True" identifier="-- SQLskills_LastCheckDBDate" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_sysconfigurations" enabled="True" identifier="-- SQLskills_sysconfigurations" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_SQLAgentAlerts" enabled="True" identifier="-- SQLskills_SQLAgentAlerts" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_MaintenancePlans" enabled="True" identifier="-- SQLskills_MaintenancePlans" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_SQLAgentJobs" enabled="True" identifier="-- SQLskills_SQLAgentJobs" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_IndexDetails" enabled="True" identifier="-- SQLskills_IndexDetails" type="RowsetImportEngine.TextRowset" />
-    <Rowset name="SQLskills_MissingIndexes" enabled="True" identifier="-- SQLskills_MissingIndexes" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_DiskLatencyInfo" enabled="True" identifier="-- Disk Latency Information" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_FileLatencyInfo" enabled="True" identifier="-- File Latency Information" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_RING_BUFFER_RESOURCE_MONITOR" enabled="True" identifier="-- System Memory Usage" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_RING_BUFFER_SCHEDULER_MONITOR" enabled="True" identifier="-- CPU Utilization" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_RING_BUFFER_EXCEPTION" enabled="True" identifier="-- Error Exceptions" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_RING_BUFFER_CONNECTIVITY" enabled="True" identifier="-- Connectivity Timers" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_RING_BUFFER_MEMORY_BROKER" enabled="True" identifier="-- Get Startup Memory Utilization" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_RING_BUFFER_OOM" enabled="True" identifier="-- Out of Memory Notifications" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_MemoryClerkSummary" enabled="True" identifier="-- DiagAnalyzer_MemoryClerkSummary" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_BufferCacheDetail" enabled="True" identifier="-- DiagAnalyzer_BufferCacheDetail" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_FindImplicitConversions" enabled="True" identifier="-- DiagAnalyzer_FindImplicitConversions" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_LastBackupInfo" enabled="True" identifier="-- DiagAnalyzer_LastBackupInfo" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_PlanCacheSummary" enabled="True" identifier="-- DiagAnalyzer_PlanCacheSummary" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_BufferCacheSummary" enabled="True" identifier="-- DiagAnalyzer_BufferCacheSummary" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_AllLogInfo" enabled="True" identifier="-- DiagAnalyzer_AllLogInfo" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_IndexCounts" enabled="True" identifier="-- DiagAnalyzer_IndexCounts" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_Cores_vs_MaxDop" enabled="True" identifier="-- DiagAnalyzer_Cores_vs_MaxDop" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_IndexUsageForObject" enabled="True" identifier="-- DiagAnalyzer_IndexUsageForObject" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_WaitStatsOverall" enabled="True" identifier="-- DiagAnalyzer_WaitStatsOverall" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_MostExpensiveQueries" enabled="True" identifier="-- DiagAnalyzer_MostExpensiveQueries" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_DBInfo" enabled="True" identifier="-- DiagAnalyzer_DBInfo" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_BackupInfo" enabled="True" identifier="-- DiagAnalyzer_BackupInfo" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_LastCheckDBDate" enabled="True" identifier="-- DiagAnalyzer_LastCheckDBDate" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_sysconfigurations" enabled="True" identifier="-- DiagAnalyzer_sysconfigurations" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_SQLAgentAlerts" enabled="True" identifier="-- DiagAnalyzer_SQLAgentAlerts" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_MaintenancePlans" enabled="True" identifier="-- DiagAnalyzer_MaintenancePlans" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_SQLAgentJobs" enabled="True" identifier="-- DiagAnalyzer_SQLAgentJobs" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_IndexDetails" enabled="True" identifier="-- DiagAnalyzer_IndexDetails" type="RowsetImportEngine.TextRowset" />
+    <Rowset name="DiagAnalyzer_MissingIndexes" enabled="True" identifier="-- DiagAnalyzer_MissingIndexes" type="RowsetImportEngine.TextRowset" />
     <Rowset name="cust_availability_databases_cluster" enabled="True" identifier="-> sys.availability_databases_cluster" type="RowsetImportEngine.TextRowset" />
     <Rowset name="cust_availability_group_listener_ip_addresses" enabled="True" identifier="-> sys.availability_group_listener_ip_addresses" type="RowsetImportEngine.TextRowset" />
     <Rowset name="cust_availability_group_listeners" enabled="True" identifier="-> sys.availability_group_listeners" type="RowsetImportEngine.TextRowset" />
@@ -379,10 +379,10 @@
     <Rowset name="tbl_query_store_query_text" enabled="True" identifier="--sys.query_store_query_text--" type="RowsetImportEngine.TextRowset"/>
     <Rowset name="tbl_query_store_plan" enabled="True" identifier="--sys.query_store_plan--" type="RowsetImportEngine.TextRowset"/>
     <Rowset name="cust_DBStatsProperties" enabled="True" identifier="-- sys.dm_db_stats_properties for database name%%" type="RowsetImportEngine.TextRowset"/>
-    <Rowset name="SQLskills_ClusteredIndexScans" enabled="True" identifier="-- SQLskills_ClusteredIndexScans" type="RowsetImportEngine.TextRowset"/>
-    <Rowset name="SQLskills_HashMatches" enabled="True" identifier="-- SQLskills_HashMatches" type="RowsetImportEngine.TextRowset"/>
-    <Rowset name="SQLskills_TableScans" enabled="True" identifier="-- SQLskills_TableScans" type="RowsetImportEngine.TextRowset"/>
-    <Rowset name="SQLskills_IndexScans" enabled="True" identifier="-- SQLskills_IndexScans" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="DiagAnalyzer_ClusteredIndexScans" enabled="True" identifier="-- DiagAnalyzer_ClusteredIndexScans" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="DiagAnalyzer_HashMatches" enabled="True" identifier="-- DiagAnalyzer_HashMatches" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="DiagAnalyzer_TableScans" enabled="True" identifier="-- DiagAnalyzer_TableScans" type="RowsetImportEngine.TextRowset"/>
+    <Rowset name="DiagAnalyzer_IndexScans" enabled="True" identifier="-- DiagAnalyzer_IndexScans" type="RowsetImportEngine.TextRowset"/>
   
     <Rowset name="tbl_high_cpu_queries" enabled="true" identifier="--  high_cpu_queries --" type="RowsetImportEngine.TextRowset"/>
     <Rowset name="tbl_AG_AlwaysOn_health_alwayson_ddl_executed" enabled="true" identifier="-- AG_AlwaysOn_health_alwayson_ddl_executed --" type="RowsetImportEngine.TextRowset"/>
