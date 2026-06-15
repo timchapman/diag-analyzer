@@ -9,9 +9,9 @@ output_dir = "diagnostics"
 conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
-# 1. Create PTOClinicFindings table if not exists
+# 1. Create TroubleshooterFindings table if not exists
 cursor.execute("""
-CREATE TABLE IF NOT EXISTS PTOClinicFindings (
+CREATE TABLE IF NOT EXISTS TroubleshooterFindings (
     [Title] TEXT,
     [Category] TEXT,
     [Severity] TEXT,
@@ -21,13 +21,13 @@ CREATE TABLE IF NOT EXISTS PTOClinicFindings (
     [SummaryCategory] TEXT
 )
 """)
-cursor.execute("DELETE FROM PTOClinicFindings")
+cursor.execute("DELETE FROM TroubleshooterFindings")
 conn.commit()
 
 rules = [
     # Database Settings Rules
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation])
     SELECT 
         'User database is set to compatibility level lower than the default installation level.',
         'Database Settings',
@@ -39,7 +39,7 @@ rules = [
     """, "Check Database Compatibility Levels"),
 
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation])
     SELECT 
         'Databases found that have collations different from master/model databases.',
         'Database Settings',
@@ -53,7 +53,7 @@ rules = [
 
     # Operational Excellence Rules
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation])
     SELECT 
         'Databases using Delayed Durability.',
         'Operational Excellence',
@@ -66,7 +66,7 @@ rules = [
     """, "Check Delayed Durability"),
 
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation], [SummaryCategory])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation], [SummaryCategory])
     SELECT 
         'Databases with Parameterization Forced.',
         'Operational Excellence',
@@ -80,7 +80,7 @@ rules = [
     """, "Check Parameterization Forced"),
 
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation], [SummaryCategory])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation], [SummaryCategory])
     SELECT 
         'Databases with Trustworthy setting enabled.',
         'Operational Excellence',
@@ -94,7 +94,7 @@ rules = [
     """, "Check Trustworthy setting on User DBs"),
 
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation])
     SELECT 
         'Databases with Auto-Close enabled.',
         'Operational Excellence',
@@ -107,7 +107,7 @@ rules = [
     """, "Check Auto-Close databases"),
 
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation])
     SELECT 
         'Databases with Auto-Shrink enabled.',
         'Operational Excellence',
@@ -120,7 +120,7 @@ rules = [
     """, "Check Auto-Shrink databases"),
 
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation])
     SELECT 
         'Databases without CHECKSUM page verification.',
         'Operational Excellence',
@@ -134,7 +134,7 @@ rules = [
 
     # Server Configuration Rules
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation])
     SELECT 
         'Max Degree of Parallelism (MaxDOP) is set to 0.',
         'Server Configuration',
@@ -145,7 +145,7 @@ rules = [
     """, "Check MaxDOP Configuration"),
 
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation])
     SELECT 
         'Cost Threshold for Parallelism is set to default (5).',
         'Server Configuration',
@@ -157,7 +157,7 @@ rules = [
 
     # HEAP Tables with High Rows Count
     ("""
-    INSERT INTO PTOClinicFindings ([Title],[Category],[Severity],[Recommendation])
+    INSERT INTO TroubleshooterFindings ([Title],[Category],[Severity],[Recommendation])
     SELECT 
         'Tables have been identified that are Heaps (No Clustered Index) with high row counts.',
         'Database Design',
@@ -181,20 +181,20 @@ for sql, desc in rules:
         print(f"Error running rule: {e}")
 
 # Count total findings
-cursor.execute("SELECT COUNT(*) FROM PTOClinicFindings")
+cursor.execute("SELECT COUNT(*) FROM TroubleshooterFindings")
 total_findings = cursor.fetchone()[0]
 
 # Export to CSV
-cursor.execute("SELECT * FROM PTOClinicFindings")
+cursor.execute("SELECT * FROM TroubleshooterFindings")
 data = cursor.fetchall()
 if data:
     headers = [col[0] for col in cursor.description]
-    csv_path = os.path.join(output_dir, "PTOClinicFindings.csv")
+    csv_path = os.path.join(output_dir, "TroubleshooterFindings.csv")
     with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(headers)
         writer.writerows(data)
-    print(f"\nSuccessfully populated PTOClinicFindings table with {total_findings} health findings.")
+    print(f"\nSuccessfully populated TroubleshooterFindings table with {total_findings} health findings.")
     print(f"Exported to {csv_path}")
 
 conn.close()
