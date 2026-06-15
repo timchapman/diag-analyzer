@@ -28,3 +28,4 @@ import_perf_stats.py
 # OS-specific files
 .DS_Store
 Thumbs.db
+complete_analyzer_reports.py
