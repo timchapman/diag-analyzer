@@ -3,7 +3,27 @@ import sys
 
 db_path = "data-analysis.db"
 
-def run_query(query, params=()):
+def table_exists(table_name):
+    """Check if a table exists in the SQLite database."""
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    try:
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?", (table_name,))
+        exists = cursor.fetchone() is not None
+        return exists
+    except Exception:
+        return False
+    finally:
+        conn.close()
+
+def run_query(query, required_tables=(), params=()):
+    """Verify table existence before executing SQLite query to prevent runtime errors."""
+    for tbl in required_tables:
+        if not table_exists(tbl):
+            print(f"Error: Required table '{tbl}' does not exist in the database.")
+            print(f"Skipping this report because the required PSSDIAG metric was not captured.")
+            return None, None
+            
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     try:
@@ -18,16 +38,18 @@ def run_query(query, params=()):
         conn.close()
 
 def print_table(title, headers, data):
+    if headers is None or data is None:
+        return
+        
     print(f"\n=== {title} ===")
     if not data:
         print("No results found.")
         return
-    # We will format using tabulate if available, fallback to simple print
+        
     try:
         from tabulate import tabulate as tab
         print(tab(data, headers=headers, tablefmt="github"))
     except ImportError:
-        # Simple fallback formatter
         widths = [max(len(str(x)) for x in col) for col in zip(*data)]
         header_line = " | ".join(f"{h:<{w}}" for h, w in zip(headers, widths))
         print(header_line)
@@ -36,7 +58,6 @@ def print_table(title, headers, data):
             print(" | ".join(f"{str(val):<{w}}" for val, w in zip(row, widths)))
 
 def show_memory():
-    # Memory Configuration
     query = """
     SELECT 
         ROUND(CAST(physical_memory_kb AS BIGINT) / 1024.0 / 1024.0, 2) AS [Physical Memory (GB)],
@@ -46,11 +67,10 @@ def show_memory():
     FROM cust_OSInfo 
     LIMIT 1;
     """
-    headers, data = run_query(query)
+    headers, data = run_query(query, required_tables=["cust_OSInfo", "cust_SPConfigure"])
     print_table("Memory Sizing Configuration", headers, data)
 
 def show_waits():
-    # Top waits by percentage
     query = """
     SELECT 
         WaitType, 
@@ -61,11 +81,10 @@ def show_waits():
     ORDER BY CAST(Percentage AS REAL) DESC 
     LIMIT 10;
     """
-    headers, data = run_query(query)
+    headers, data = run_query(query, required_tables=["cust_Waiting"])
     print_table("Top 10 Wait Statistics", headers, data)
 
 def show_expensive_queries():
-    # Top expensive queries by AverageRunTime
     query = """
     SELECT 
         ROUND(CAST(AverageRunTimeSeconds AS REAL), 2) AS [Avg Duration (s)],
@@ -77,11 +96,10 @@ def show_expensive_queries():
     ORDER BY CAST(AverageRunTimeSeconds AS REAL) DESC 
     LIMIT 10;
     """
-    headers, data = run_query(query)
+    headers, data = run_query(query, required_tables=["cust_ExpensiveQueries"])
     print_table("Top 10 Expensive Queries (by Avg Run Time)", headers, data)
 
 def show_blocking():
-    # Active Blocking Summary
     query = """
     SELECT DISTINCT 
         r.runtime AS [Snapshot Time], 
@@ -102,11 +120,10 @@ def show_blocking():
     ORDER BY r.runtime, r.session_id
     LIMIT 20;
     """
-    headers, data = run_query(query)
+    headers, data = run_query(query, required_tables=["cust_requests", "cust_NotableActiveQueries"])
     print_table("Active Blocking Instances (First 20)", headers, data)
 
 def show_table_scans():
-    # Tables with highest User Scans (indicates potential index deficiencies)
     query = """
     SELECT 
         idx.DatabaseName AS [DB], 
@@ -128,7 +145,7 @@ def show_table_scans():
     ORDER BY CAST(idx.UserScans AS BIGINT) DESC 
     LIMIT 15;
     """
-    headers, data = run_query(query)
+    headers, data = run_query(query, required_tables=["cust_UnusedIndexes", "cust_CompressionDetails", "cust_IndexDetail"])
     print_table("Top 15 Tables/Indexes with Highest User Scans", headers, data)
 
 def main():
